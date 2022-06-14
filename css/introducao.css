@@ -1,0 +1,72 @@
+.introducao {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.introducao h1 {
+    /* font-size: clamp(1.5rem,4vw,4rem); */
+    /* ^Funciona: minimo de 1.5rem a 4rem, ideal 4vw. O valor do font-size se ajustara de acordo com a tela, elimina a necessidade de um @media */
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: 100px;
+}
+
+.introducao h1::before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url("../img/detalhe.svg") no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    z-index: -1;
+}
+
+.introducao p {
+    font-size: 1.5rem;
+    color: #525252;
+    margin-left: 100px;
+
+}
+
+@media(max-width: 930px) {
+    .introducao h1 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 800px) {
+    .introducao {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .introducao h1 {
+        font-size: 2rem;
+    }
+
+    .introducao h1::before {
+        width: 40px;
+        height: 10px;
+        left: 1px;
+    }
+}
+
+@media(max-width: 460px) {
+    .introducao {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao img {
+        display: none;
+    }
+
+}

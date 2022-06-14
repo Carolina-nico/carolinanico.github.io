@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+    font-family: 'Fira Sans', Arial, sans-serif;
+    color: #141414;
+    /* margin-bottom: 1000px; */
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 100px;
+}
+
+.experiencia .subtitulo {
+    font-size: 8rem;
+    word-break: break-all;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 5ch;
+    /* ^ 5ch, Seria o caractere 0. Basicamente no espaçamento quebrara a palava com 5 letras em cada linha. Nem sempre pode funcionar por conta da dimensão onde o texto esta, por ex: a palavra Experiencia ficou com 4 em cada linha, sendo o valor de 5ch */
+}
+
+.formacao .subtitulo {
+    font-size: 7rem;
+    word-break: break-all;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 6ch;
+}
+
+
+@media(max-width: 800px) {
+    .experiencia .subtitulo {
+        font-size: 3rem;
+        text-transform: capitalize;
+        max-width: initial;
+    }
+
+    .formacao .subtitulo {
+        font-size: 3rem;
+        text-transform: capitalize;
+        max-width: initial;
+    }
+}
